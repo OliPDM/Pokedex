@@ -1,0 +1,71 @@
+@media (max-width: 1017px) {
+    .pokemon-card {
+        width: 194px !important;
+    }
+
+    h2 {
+        font-size: 20px !important;
+    }
+}
+
+@media (max-width: 705px) {
+    header {
+        display: block;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .pokemon-card {
+        width: 194px !important;
+    }
+
+    h2 {
+        font-size: 18px !important;
+    }
+}
+
+@media (max-width: 633px) {
+    header {
+        display: block;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    h1 {
+        font-size: 85px;
+    }
+
+    .pokemon-card {
+        width: 185px !important;
+    }
+
+    h2 {
+        font-size: 16px !important;
+    }
+}
+
+@media (max-width: 490px) {
+    header {
+        display: block;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    h1 {
+        font-size: 70px;
+    }
+
+    .pokemon-card {
+        width: 250px !important;
+    }
+
+    h2 {
+        font-size: 18px !important;
+    }
+}
+
+@media (max-width: 430px) {
+    h1 {
+        font-size: 55px;
+    }
+}
