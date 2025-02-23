@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="icon" href="assets/img/favicon.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pokecard.css">
+    <link rel="stylesheet" href="overlay.css">
+    <link rel="stylesheet" href="spinner.css">
+    <link rel="stylesheet" href="media.css">
+    <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div class="content_wrapper">
+        <header>
+            <h1 class="outlined_text">Pokédex</h1>
+            <input type="text" placeholder="Search Pokémon" id="search-input" oninput="searchPokemon()" minlength="2"
+                class="search_pokemon_button">
+        </header>
+
+
+        <div id="loading-spinner">
+            <img src="assets/gif/loading_spinner.gif" alt="Loading...">
+        </div>
+
+
+        <div id="pokemon-container"></div>
+
+
+        <div id="modal">
+            <button id="prev-pokemon" class="modal_arrow left_arrow" onclick="navigatePokemon(-1)">❮</button>
+            <div id="modal-content">
+                <h2 id="modal-name"></h2>
+                <div class="modal_img_container">
+                    <img id="modal_img_bg" class="modal_img_bg">
+                    <img id="modal-image" alt="" onclick="playCry()" class="modal_image">
+                </div>
+                <audio id="pokemon-cry" style="display: none;"></audio>
+                <div class="modal_bar_conatiner">
+                    <div class="modal_button" onclick="openModalSection('stats')"><strong>Base-Stats</strong></div>
+                    <div class="modal_button" onclick="openModalSection('info')"><strong>Infos</strong></div>
+                    <div class="modal_button" onclick="openModalSection('shiny')"><strong>Shiny</strong></div>
+                </div>
+                <div class="placeholder_container">
+                    <div id="stats_container" class="stats_container">
+                    </div>
+                </div>
+                <button id="close-modal">Close</button>
+            </div>
+            <button id="next-pokemon" class="modal_arrow right_arrow" onclick="navigatePokemon(1)">❯</button>
+        </div>
+
+
+        <footer>
+            <button id="load_more_button" onclick="loadMorePokemon()" class="load_more_button">Load More</button>
+        </footer>
+
+    </div>
+    <script src="script.js"></script>
+    <script src="modal.js"></script>
+    <script src="colors.js"></script>
+</body>
+
+</html>
